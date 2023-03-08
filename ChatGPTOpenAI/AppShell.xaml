@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ChatGPTOpenAI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ChatGPTOpenAI"
+    xmlns:views="clr-namespace:ChatGPTOpenAI.Views"
+    Shell.TabBarIsVisible="False"
+    Shell.FlyoutBehavior="Flyout">
+    <Shell.FlyoutHeader>
+        <StackLayout Padding="20">
+            <Label Margin="10" FontFamily="Roboto" FontSize="Large" TextColor="DarkRed">Chat GPT Use API Key</Label>
+        </StackLayout>
+    </Shell.FlyoutHeader>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Chat with OpenAI"
+                      Icon="home"
+                      ContentTemplate="{DataTemplate views:ChatGPTUseApiPage}" />
+    </FlyoutItem>
+
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Setting"
+                      Icon="settings"
+                      ContentTemplate="{DataTemplate views:SettingPage}" />
+    </FlyoutItem>
+
+
+    <Shell.FlyoutFooter>
+        <StackLayout Padding="20">
+            <Label Text="267TSS" FontFamily="Roboto" ></Label>
+            <!--Button Text="Sign Out" Command="{Binding SignOutCommand}" /-->
+        </StackLayout>
+    </Shell.FlyoutFooter>
+
+
+</Shell>
